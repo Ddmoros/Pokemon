@@ -7,8 +7,8 @@ const [pokemonName, setPokemonName] = useState("")
 const [pokemonImage, setPokemonImage] = useState("")
 const [userPokemon, setUserPokemon] = useState("")
 const [pokemonType, setPokemonType] = useState("")
-const [randomPokemonArray, setRandomPokemonArray] = useState({})
-let newArr=[]
+const [displayDetail, setDisplayDetail] = useState(false)
+
 useEffect(() => {
  getData()
 }, [])
@@ -37,7 +37,15 @@ setPokemonType(type)
     <div>
          <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
+        <button>Add to favorite</button>
+        <button onClick={() => setDisplayDetail(!displayDetail)}>Detail</button> 
+        {/* ternary operator, if displayDeatil is true than display info about pokemon , else hide detail  */}
+        {displayDetail ? 
+        <>
+        <p> {pokemonName} </p>
         <p>type: {pokemonType}</p>
+        </>
+        : ""}
     
     </div>
   )
