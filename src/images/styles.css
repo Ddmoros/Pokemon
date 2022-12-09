@@ -1,0 +1,16 @@
+.pokemon-button{
+    background-image: url(./charmander.png);
+    image-resolution: 10%;
+ 
+}
+
+img{
+    padding: 0em;
+    z-index: 0;
+
+}
+
+button{
+ 
+    z-index: 1;
+}
