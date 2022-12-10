@@ -10,13 +10,19 @@ import Card from './components/Card';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Random from './components/Random';
+import Library from './components/Library';
+import { Provider } from 'react-redux';
+import {createStore} from 'redux'
+import reducer from './reducers/reducer';
 
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())//reducer
 
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     
       <Router>
@@ -25,11 +31,13 @@ root.render(
             <Route path='/' element={<Home />} />
             <Route path='/card' element={<Card />} />
             <Route path='/random' element={<Random />}/>
+            <Route path='/Library' element={<Library />}/>
           </Routes>
         </BaseLayout>
       </Router>
       <Footer />
   </React.StrictMode>
+  </Provider> 
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -23,6 +23,7 @@ const PokemonNav = () => {
           <Nav className="ml-auto">
             <Link to="/" className='path'>Home</Link>
             <Link to="/Card" className='path'>Card</Link>
+            <Link to="/Library" className='path'>Library</Link>
             
           </Nav>
         </Navbar.Collapse>

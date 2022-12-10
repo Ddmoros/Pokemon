@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import charmander from '../images/charmander.png'
 import "../images/styles.css"
 
 
@@ -30,9 +29,8 @@ const Card =  () => {
         setPokemonAbility(ability)
     }
 
-    const test = (e) => {setUserPokemon(e.target.value)
-    console.log("test")
-    }
+  
+    
 
    const handleClick = (e) => { 
     setUserPokemon(e.target.value)
@@ -77,7 +75,7 @@ const Card =  () => {
 
 export default Card
 
-
+// https://pokeapi.co/docs/v2
 
 // name pokemon1123
 // pikachu
