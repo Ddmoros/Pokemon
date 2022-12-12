@@ -21,10 +21,10 @@ const PokemonNav = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" /> 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Link to="/" className='path'>Home</Link>
-            <Link to="/Card" className='path'>Card</Link>
-            <Link to="/Library" className='path'>Library</Link>
-            <Link to="/favorite" className='path'>Favorite</Link>
+            <Link to="/" className='path'> Home🏠 </Link>
+            <Link to="/Card" className='path'> Card📇 </Link>
+            <Link to="/Library" className='path'> Library📚 </Link>
+            <Link to="/favorite" className='path'> Favorite🙌 </Link>
 
           </Nav>
         </Navbar.Collapse>

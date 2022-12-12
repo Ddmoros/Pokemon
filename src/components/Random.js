@@ -8,7 +8,9 @@ const [pokemonName, setPokemonName] = useState("")
 const [pokemonImage, setPokemonImage] = useState("")
 const [userPokemon, setUserPokemon] = useState("")
 const [pokemonType, setPokemonType] = useState("")
+const [pokemonPopularAbility, setPokemonPopularAbility] = useState("")
 const [displayDetail, setDisplayDetail] = useState(false)
+
 
 useEffect(() => {
  getData()
@@ -24,12 +26,14 @@ let data = await results.json() // make json for data manipulation
         const name = data.forms[0].name
         const type = data.types[0].type.name
         const image =data.sprites.other.home.front_default
+        const popularAbility = data.abilities[0].ability.name
 
 console.log(image)
 setPokemon(data)
 setPokemonName(name)
 setPokemonImage(image)
 setPokemonType(type)
+setPokemonPopularAbility(popularAbility)
 }
 const handleAdd = (pokemon)=>{
   // console.log(pokemon)
@@ -46,8 +50,9 @@ const handleAdd = (pokemon)=>{
         {/* ternary operator, if displayDeatil is true than display info about pokemon , else hide detail  */}
         {displayDetail ? 
         <>
-        <p>Name: {pokemonName} </p>
-        <p>type: {pokemonType}</p>
+        <p>Name📛: {pokemonName} </p>
+        <p>type🫥: {pokemonType}</p>
+          <p>popular Ability🎯: {pokemonPopularAbility}</p>
         </>
         : ""}
     

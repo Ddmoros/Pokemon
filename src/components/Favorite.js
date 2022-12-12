@@ -5,16 +5,18 @@ const Favorite = (props) => {
 console.log(props.favorite)
 
 
-
-    let character = props.favorite.forEach(pokemon=>{
-        console.log(pokemon.name)
-        return <p>{pokemon.name}</p>
+    let allCharacters = props.favorite
+    let character = allCharacters.forEach(pokemon=>{
+        // console.log(pokemon.name)
+        console.log(pokemon.forms[0].name)
+        return <p>{pokemon.forms[0].name}</p>
     })
 
   return (
 
 <>
         {character}
+       
 </>
   )
 }

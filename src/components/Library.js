@@ -62,19 +62,20 @@ pokemonLibrary()
 
   return (
     <div>
+     
             <Row xs={1} md={3} className="g-4">
         <Col>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage1} />
             <Card.Body>
-              <Card.Title>{pokemonName}</Card.Title>
+              <Card.Title>Name: {pokemonName}</Card.Title><hr></hr>
               <Card.Text>
-                HP: {pokemonHp}, 
-                Attack: {pokemonAttack}, 
-                Defense: {pokemonDefense}, 
-                Type: {pokemonType}, 
-                Popular Move: {pokemonPopularMove}, 
-                Popular Ability: {pokemonPopularAbility}
+                HP: {pokemonHp}, <br></br>
+                Attack: {pokemonAttack}, <br></br>
+                Defense: {pokemonDefense}, <br></br>
+                Type: {pokemonType}, <br></br>
+                Popular Move: {pokemonPopularMove},<br></br> 
+                Popular Ability: {pokemonPopularAbility}<br></br>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -82,9 +83,9 @@ pokemonLibrary()
     </Row>
 
        
-     Pokemon Button
-        <button onClick={() => dispatch(decrementCount(1))}>previous</button>
-        <button onClick={() => dispatch(incrementCount(1))}>next</button>
+     Pokemon Button ⤵<br></br>
+        <button onClick={() => dispatch(decrementCount(1))}>previous </button>
+        <button onClick={() => dispatch(incrementCount(1))}>next ➕</button>
 
 
     </div>

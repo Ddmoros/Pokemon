@@ -60,9 +60,9 @@ const Card =  () => {
             {/* <button className="pokemon-button" value="charmander" onClick={(e) => setUserPokemon(e.target.value)}><img alt="charmander" src={charmander}/></button> */}
             
             {/* <p>{userPokemon}</p>  */}
-        
+           
         </div>
-     
+       
         <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
         <p>Type: {pokemonType}</p>
