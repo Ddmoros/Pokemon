@@ -62,7 +62,7 @@ const Card =  () => {
             {/* <p>{userPokemon}</p>  */}
         
         </div>
-        <button type="submit"onClick={fetchPokemon}>Add</button>
+     
         <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
         <p>Type: {pokemonType}</p>

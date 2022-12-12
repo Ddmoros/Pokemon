@@ -3,7 +3,8 @@ const reducer = (state, action) => {
 
     if(state === undefined){
         state = {
-            count: 10
+            count: 10, 
+            favorite:[]
         }
     }
 
@@ -20,6 +21,12 @@ const reducer = (state, action) => {
             return {
                 ...state, 
                 count: state.count - action.data
+            }
+            case "ADD_TO_FAVORITE": 
+            // console.log(action.data)
+            return {
+                ...state, 
+                favorite:state.favorite.concat(action.data)
             }
 
         default: 

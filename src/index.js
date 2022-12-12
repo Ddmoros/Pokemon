@@ -14,6 +14,7 @@ import Library from './components/Library';
 import { Provider } from 'react-redux';
 import {createStore} from 'redux'
 import reducer from './reducers/reducer';
+import Favorite from './components/Favorite';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())//reducer
 
@@ -32,6 +33,7 @@ root.render(
             <Route path='/card' element={<Card />} />
             <Route path='/random' element={<Random />}/>
             <Route path='/Library' element={<Library />}/>
+            <Route path='/favorite' element={<Favorite />}/>
           </Routes>
         </BaseLayout>
       </Router>

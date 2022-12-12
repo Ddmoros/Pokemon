@@ -1,3 +1,4 @@
+/* This is importing the necessary components. */
 import React,{useState} from 'react'
 import decrementCount from '../actions/decrementCount.js'
 import incrementCount from '../actions/incrementCount.js'
@@ -14,6 +15,7 @@ const Library = () => {
     const value = useSelector(state => state.count)
 
 
+/* This is setting the state of the pokemon. */
     const [pokemonImage1, setPokemonImage1] = useState("")
     const [pokemonDefense, setPokemonDefense] = useState("")
     const [pokemonAttack, setPokemonAttack] = useState("")
@@ -38,6 +40,7 @@ const Library = () => {
 
 
 
+     /* Setting the state of the pokemon. */
         setPokemonImage1(image)
         setPokemonDefense(defense)
         setPokemonAttack(attack)
@@ -79,6 +82,7 @@ pokemonLibrary()
     </Row>
 
        
+     Pokemon Button
         <button onClick={() => dispatch(decrementCount(1))}>previous</button>
         <button onClick={() => dispatch(incrementCount(1))}>next</button>
 
