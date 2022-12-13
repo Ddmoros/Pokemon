@@ -1,6 +1,6 @@
 
 # Pokemon App⚡️
-
+![PokemonApp](./src/images/pokemonApp.png) 
 
 
 ## Api
