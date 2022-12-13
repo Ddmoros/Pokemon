@@ -1,0 +1,17 @@
+.footerMain{
+    background-color: black;
+    color: #ffc107;
+    position:fixed;
+    bottom:0;
+    width:100vw;
+    text-align: center;
+}
+.icons{
+    color:#ffc107;
+    margin: 5px 10px;
+}
+@media only screen and (max-width: 768px) {
+    .footerMain{
+      opacity: 0;
+    }
+  }

@@ -115,7 +115,10 @@ pokemonLibrary()
 
   return (
     <div>
-     
+        Pokemon Button ⤵<br></br>
+        <button onClick={() => dispatch(decrementCount(3))}> 🔙 </button>
+        <button onClick={() => dispatch(incrementCount(3))}> 🔜</button>
+
             <Row xs={1} md={3} className="g-4">
         <Col>
           <Card className='card-container'>
@@ -168,9 +171,7 @@ pokemonLibrary()
     </Row>
 
        
-     Pokemon Button ⤵<br></br>
-        <button onClick={() => dispatch(decrementCount(3))}>previous </button>
-        <button onClick={() => dispatch(incrementCount(3))}>next ➕</button>
+
 
 
     </div>

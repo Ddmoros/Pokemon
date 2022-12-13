@@ -5,12 +5,14 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import "../images/random.css"
 import Container from 'react-bootstrap/Container';
+import Search from './Search';
+
 
 const Random = (props) => {
 const [pokemon, setPokemon] = useState({}) //store data about pokemon after fetch call
 const [pokemonName, setPokemonName] = useState("")
 const [pokemonImage, setPokemonImage] = useState("")
-// const [userPokemon, setUserPokemon] = useState("")
+const [userPokemon, setUserPokemon] = useState("")
 const [pokemonType, setPokemonType] = useState("")
 const [pokemonPopularAbility, setPokemonPopularAbility] = useState("")
 const [displayDetail, setDisplayDetail] = useState(false)
@@ -45,11 +47,15 @@ const handleAdd = (pokemon)=>{
   props.addToFavorite(pokemon)
 }
 
+function refreshPage() {
+  window.location.reload();
+}
 
   return (
     <div> 
-     
-
+   
+  
+      <Search />
           <Container>
              <Row xs={1} md={3} className="g-4">
  <Col>
@@ -58,11 +64,10 @@ const handleAdd = (pokemon)=>{
      <Card.Body>
        <Card.Title>Name: {pokemonName}</Card.Title><hr></hr>
        <Card.Text>
-         Type: {pokemonType}, <br></br>
-         Popular Ability: {pokemonPopularAbility}<br></br>
+       
        </Card.Text>
      </Card.Body>
-     <button onClick={(obj) => handleAdd(pokemon)}>Add to favorite</button>
+  
         <button onClick={() => setDisplayDetail(!displayDetail)}>Detail</button> 
         {/* ternary operator, if displayDeatil is true than display info about pokemon , else hide detail  */}
         {displayDetail ? 
@@ -72,7 +77,7 @@ const handleAdd = (pokemon)=>{
         <p>popular Ability🎯: {pokemonPopularAbility}</p>
         </>
         : ""}
-
+    <button onClick={refreshPage}>Click to new pokemon!</button>
    </Card>
  </Col>
  
@@ -81,6 +86,7 @@ const handleAdd = (pokemon)=>{
   
 </Row>
 </Container>
+
     </div>
   )
 }
