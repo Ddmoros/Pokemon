@@ -16,3 +16,13 @@ button{
 }
 
 
+@media only screen and (max-width: 100px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+  /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }

@@ -1,13 +1,19 @@
 import React from 'react'
-import Random from './Random'
+import Library from './Library'
+
+
 
 const Home = () => {
   return (
-    <div style={{display:'flex'}}>hola 
-      <Random/> 
-      <Random/> 
-      <Random/> 
+    <div>
+   <Library />
+
+
+    
+     
+
     </div>
+
   )
 }
 
