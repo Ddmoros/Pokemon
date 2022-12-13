@@ -4,7 +4,7 @@
 
 
 ## Api
-[Pokemon API] (https://pokeapi.co/api/v2/pokemon/)
+[Pokemon API](https://pokeapi.co/api/v2/pokemon/ "Pokemon API")
 
 
 
@@ -12,5 +12,5 @@
 * HTML, CSS, JavaScript, React, Redux
 
 ## Contributor
- [Daniel Moros](https://github.com/Ddmoros) 
+ [Daniel Moros](https://github.com/Ddmoros "Daniel Moros") 
 
