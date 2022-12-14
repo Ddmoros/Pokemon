@@ -1,6 +1,7 @@
-/* Importing the PokemonNav component from the PokemonNav.js file. */
-/* Importing the React library from the node_modules folder. */
+
+/* Importing the React library. */
 import React from 'react'
+/* Importing the PokemonNav component from the PokemonNav.js file. */
 import PokemonNav from '../PokemonNav'
 
 

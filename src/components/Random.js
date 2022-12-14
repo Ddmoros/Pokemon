@@ -27,7 +27,7 @@ useEffect(() => {
 
 const getData = async() => {
     const number = Math.floor(Math.random() *900) //this function will get us a random number from 0 to 899
-let results = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}/`) // `` ${} template literals
+let results = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}/`) // `` ${} template literals por que temples??
 let data = await results.json() // make json for data manipulation
 // newArr.push(data)
 // setRandomPokemonArray(data)
@@ -37,11 +37,11 @@ let data = await results.json() // make json for data manipulation
         const popularAbility = data.abilities[0].ability.name
 
 console.log(image)
-setPokemon(data)
-setPokemonName(name)
-setPokemonImage(image)
-setPokemonType(type)
-setPokemonPopularAbility(popularAbility)
+          setPokemon(data)
+          setPokemonName(name)
+          setPokemonImage(image)
+          setPokemonType(type)
+          setPokemonPopularAbility(popularAbility)
 }
 const handleAdd = (pokemon)=>{
   // console.log(pokemon)

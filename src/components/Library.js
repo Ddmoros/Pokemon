@@ -15,9 +15,11 @@ import Row from 'react-bootstrap/Row';
  * button has an onClick event that dispatches an action to the Redux store. The paragraph displays the
  * value of the Redux store.
  */
+
 const Library = () => {
-    const dispatch= useDispatch()
-    const value = useSelector(state => state.count)
+    
+    const dispatch= useDispatch() // A hook let dispatch actions
+    const value = useSelector(state => state.count) //Getting the value of the state
 
 
    /* This is setting the state of the pokemon. */
@@ -55,7 +57,7 @@ const Library = () => {
    */
     const pokemonLibrary = async() => {
         const pokemonFetch= await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
-        const pokemonData = await pokemonFetch.json()
+        const pokemonData = await pokemonFetch.json()  // manipulacion de la informacion de API
 
 
 /* This is setting the state of the pokemon. */
@@ -82,7 +84,7 @@ const Library = () => {
 
  /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch2= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+1}`)
-        const pokemonData2 = await pokemonFetch2.json()
+        const pokemonData2 = await pokemonFetch2.json() // manipulacion de la informacion de API
 
             const image2 = pokemonData2.sprites.other.home.front_default
             const defense2 = pokemonData2.stats[2].base_stat
@@ -105,7 +107,7 @@ const Library = () => {
 
  /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch3= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+2}`)
-        const pokemonData3 = await pokemonFetch3.json()
+        const pokemonData3 = await pokemonFetch3.json()  // manipulacion de la informacion de API
 
             const image3 = pokemonData3.sprites.other.home.front_default
             const defense3 = pokemonData3.stats[2].base_stat
@@ -137,11 +139,12 @@ pokemonLibrary()
   return (
     <div>
         Pokemon Button ⤵<br></br>
-        <button onClick={() => dispatch(decrementCount(3))}> 🔙 </button>
-        <button onClick={() => dispatch(incrementCount(3))}> 🔜</button>
+        <button onClick={() => dispatch(decrementCount(1))}> 🔙 </button>
+        <button onClick={() => dispatch(incrementCount(1))}> 🔜</button>
 
             <Row xs={1} md={3} className="g-4">
         <Col>
+        <p>evolucion 1️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage1} />
             <Card.Body>
@@ -157,7 +160,10 @@ pokemonLibrary()
             </Card.Body>
           </Card>
         </Col>
+        
+        
         <Col>
+        <p>evolucion 2️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage2} />
             <Card.Body>
@@ -173,7 +179,9 @@ pokemonLibrary()
             </Card.Body>
           </Card>
         </Col>
+
         <Col>
+        <p>evolucion 3️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage3} />
             <Card.Body>
