@@ -144,7 +144,7 @@ pokemonLibrary()
 
             <Row xs={1} md={3} className="g-4">
         <Col>
-        <p>evolucion 1️⃣</p>
+        <p>Evolution 1️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage1} />
             <Card.Body>
@@ -163,7 +163,7 @@ pokemonLibrary()
         
         
         <Col>
-        <p>evolucion 2️⃣</p>
+        <p>Evolution 2️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage2} />
             <Card.Body>
@@ -181,7 +181,7 @@ pokemonLibrary()
         </Col>
 
         <Col>
-        <p>evolucion 3️⃣</p>
+        <p>Evolution 3️⃣</p>
           <Card className='card-container'>
             <Card.Img className='card-image' variant="top" src={pokemonImage3} />
             <Card.Body>
