@@ -4,6 +4,7 @@ import PokemonNav from '../PokemonNav'
 
 
 
+/* A function that takes in a prop called children. */
 const BaseLayout = ({children}) => {
   return (
     <div>

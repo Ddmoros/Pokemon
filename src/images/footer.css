@@ -1,13 +1,13 @@
 .footerMain{
-    background-color: black;
-    color: #ffc107;
+    background-color: rgb(237, 29, 29);
+    color: #40c9ee;
     position:fixed;
     bottom:0;
     width:100vw;
     text-align: center;
 }
 .icons{
-    color:#ffc107;
+    color:#07e6ff;
     margin: 5px 10px;
 }
 @media only screen and (max-width: 768px) {

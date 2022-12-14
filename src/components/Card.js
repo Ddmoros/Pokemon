@@ -1,3 +1,4 @@
+/* The above code is importing the React library and the useState hook from the React library. */
 import React,{useState} from 'react'
 import "../images/styles.css"
 
@@ -6,6 +7,11 @@ import "../images/styles.css"
 
 
 
+
+/**
+ * The function takes in a user input, and then uses that input to fetch data from the PokeAPI. The
+ * data is then stored in variables, and then those variables are used to set the state of the app
+ */
 const Card =  () => {
     const [pokemonName, setPokemonName] = useState("")
     const [pokemonImage, setPokemonImage] = useState("")
@@ -39,7 +45,7 @@ const Card =  () => {
   return (
     <div>
         <div>
-           {/* <img alt="charmander" src={charmander} value="pikachu" onClick={(e) => setUserPokemon(e.target.value)} /> */}
+       
 
             <button className="pokemon-button" value="pikachu" onClick={(e) => handleClick(e)}>pikachu</button>
             <button value="pichu" onClick={(e) => handleClick(e)}>pichu</button>
@@ -57,12 +63,11 @@ const Card =  () => {
             <button value="snorlax" onClick={(e) => handleClick(e)}>snorlax</button>
             <button value="tauros" onClick={(e) => handleClick(e)}>tauros</button>
             
-            {/* <button className="pokemon-button" value="charmander" onClick={(e) => setUserPokemon(e.target.value)}><img alt="charmander" src={charmander}/></button> */}
-            
-            {/* <p>{userPokemon}</p>  */}
+         
            
         </div>
        
+     
         <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
         <p>Type: {pokemonType}</p>
