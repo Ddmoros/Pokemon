@@ -1,3 +1,4 @@
+/* This is importing all the necessary components for the Random.js file. */
 import {useEffect,useState} from 'react'
 import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card';
@@ -69,7 +70,7 @@ function refreshPage() {
      </Card.Body>
   
         <button onClick={() => setDisplayDetail(!displayDetail)}>Detail</button> 
-        {/* ternary operator, if displayDeatil is true than display info about pokemon , else hide detail  */}
+     
         {displayDetail ? 
         <>
         <p>Name📛: {pokemonName} </p>

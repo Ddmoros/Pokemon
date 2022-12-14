@@ -10,12 +10,17 @@ import Row from 'react-bootstrap/Row';
 
 
 
+/**
+ * The function Library is a React component that renders a div with a button and a paragraph. The
+ * button has an onClick event that dispatches an action to the Redux store. The paragraph displays the
+ * value of the Redux store.
+ */
 const Library = () => {
     const dispatch= useDispatch()
     const value = useSelector(state => state.count)
 
 
-/* This is setting the state of the pokemon. */
+   /* This is setting the state of the pokemon. */
     const [pokemonImage1, setPokemonImage1] = useState("")
     const [pokemonDefense1, setPokemonDefense1] = useState("")
     const [pokemonAttack1, setPokemonAttack1] = useState("")
@@ -43,18 +48,29 @@ const Library = () => {
     const [pokemonPopularMove3, setPokemonPopularMove3] = useState("")
     const [pokemonPopularAbility3, setPokemonPopularAbility3] = useState("")
 
+  /**
+   * the fetch API to get the data from the PokeAPI, and using the .json()
+   * method to convert the data into a JSON object.
+   * para poder manipular la imformacion"data"
+   */
     const pokemonLibrary = async() => {
         const pokemonFetch= await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
         const pokemonData = await pokemonFetch.json()
-        const image = pokemonData.sprites.other.home.front_default
-        const defense = pokemonData.stats[2].base_stat
-        const attack = pokemonData.stats[1].base_stat
-        const hp = pokemonData.stats[0].base_stat
-        const type = pokemonData.types[0].type.name
-        const name = pokemonData.name
-        const popularMove = pokemonData.moves[0].move.name
-        const popularAbility = pokemonData.abilities[0].ability.name
-     /* Setting the state of the pokemon. */
+
+
+/* This is setting the state of the pokemon. */
+            const image = pokemonData.sprites.other.home.front_default
+            const defense = pokemonData.stats[2].base_stat
+            const attack = pokemonData.stats[1].base_stat
+            const hp = pokemonData.stats[0].base_stat
+            const type = pokemonData.types[0].type.name
+            const name = pokemonData.name
+            const popularMove = pokemonData.moves[0].move.name
+            const popularAbility = pokemonData.abilities[0].ability.name
+
+
+
+/* Setting the state of the pokemon. */
         setPokemonImage1(image)
         setPokemonDefense1(defense)
         setPokemonAttack1(attack)
@@ -64,17 +80,19 @@ const Library = () => {
         setPokemonPopularMove1(popularMove)
         setPokemonPopularAbility1(popularAbility)
 
+ /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch2= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+1}`)
         const pokemonData2 = await pokemonFetch2.json()
-        const image2 = pokemonData2.sprites.other.home.front_default
-        const defense2 = pokemonData2.stats[2].base_stat
-        const attack2 = pokemonData2.stats[1].base_stat
-        const hp2 = pokemonData2.stats[0].base_stat
-        const type2 = pokemonData2.types[0].type.name
-        const name2 = pokemonData2.name
-        const popularMove2 = pokemonData2.moves[0].move.name
-        const popularAbility2 = pokemonData2.abilities[0].ability.name
-     /* Setting the state of the pokemon. */
+
+            const image2 = pokemonData2.sprites.other.home.front_default
+            const defense2 = pokemonData2.stats[2].base_stat
+            const attack2 = pokemonData2.stats[1].base_stat
+            const hp2 = pokemonData2.stats[0].base_stat
+            const type2 = pokemonData2.types[0].type.name
+            const name2 = pokemonData2.name
+            const popularMove2 = pokemonData2.moves[0].move.name
+            const popularAbility2 = pokemonData2.abilities[0].ability.name
+ /* Setting the state of the pokemon. */
         setPokemonImage2(image2)
         setPokemonDefense2(defense2)
         setPokemonAttack2(attack2)
@@ -84,17 +102,20 @@ const Library = () => {
         setPokemonPopularMove2(popularMove2)
         setPokemonPopularAbility2(popularAbility2)
 
+
+ /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch3= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+2}`)
         const pokemonData3 = await pokemonFetch3.json()
-        const image3 = pokemonData3.sprites.other.home.front_default
-        const defense3 = pokemonData3.stats[2].base_stat
-        const attack3 = pokemonData3.stats[1].base_stat
-        const hp3 = pokemonData3.stats[0].base_stat
-        const type3 = pokemonData3.types[0].type.name
-        const name3 = pokemonData3.name
-        const popularMove3 = pokemonData3.moves[0].move.name
-        const popularAbility3 = pokemonData3.abilities[0].ability.name
-     /* Setting the state of the pokemon. */
+
+            const image3 = pokemonData3.sprites.other.home.front_default
+            const defense3 = pokemonData3.stats[2].base_stat
+            const attack3 = pokemonData3.stats[1].base_stat
+            const hp3 = pokemonData3.stats[0].base_stat
+            const type3 = pokemonData3.types[0].type.name
+            const name3 = pokemonData3.name
+            const popularMove3 = pokemonData3.moves[0].move.name
+            const popularAbility3 = pokemonData3.abilities[0].ability.name
+/* Setting the state of the pokemon. */
         setPokemonImage3(image3)
         setPokemonDefense3(defense3)
         setPokemonAttack3(attack3)
