@@ -11,7 +11,7 @@ const Footer = () => {
     <div className='footerMain'>
 
   
-        <a href="https://github.com/Ddmoros"><FaGithub className='icons' size={30} /></a>
+        <a href="https://github.com/Ddmoros/Pokemon"><FaGithub className='icons' size={30} /></a>
 											
 		    <a href="https://www.linkedin.com/in/daniel-moros-059711210/" target="_blank" ><FaLinkedin className='icons' size={30} /></a>
 											
