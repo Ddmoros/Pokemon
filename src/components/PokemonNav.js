@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 
 const PokemonNav = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="info" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="info" variant="Danger">
     <Container>
       <Navbar.Brand href="/"><span className='title-nav'>Pokemon App⚡️ </span></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" /> 
