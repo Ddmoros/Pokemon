@@ -1,8 +1,5 @@
-.pokemon-button{
-    background-image: url(./charmander.png);
-    image-resolution: 10%;
- 
-}
+
+
 
 img{
     padding: 0em;
@@ -13,6 +10,9 @@ img{
 button{
  
     z-index: 1;
+    background-color: rgb(179, 179, 238);
+    text-decoration: brown;
+    border-block-start-color: brown;
 }
 
 
