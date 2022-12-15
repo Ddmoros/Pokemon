@@ -1,39 +1,40 @@
 /* The above code is importing the React library and the useState hook from the React library. */
 import React,{useState} from 'react'
-import "../images/styles.css"
+import "../images/styles.css" //the code is importing styles Css
 
 
-/**
- * The function takes in a user input, and then uses that input to fetch data from the PokeAPI. The
- * data is then stored in variables, and then those variables are used to set the state of the app
- */
+
+
 const Card =  () => {
-    const [pokemonName, setPokemonName] = useState("")
-    const [pokemonImage, setPokemonImage] = useState("")
-    const [userPokemon, setUserPokemon] = useState("")
+  /* The above code is creating a function called Card. */
+    const [pokemonName, setPokemonName] = useState("")  //values1, values2: thi only way to change value1 is by using Values2
+    const [pokemonImage, setPokemonImage] = useState("") // value1 = state, value2 = How we update or change STATE
+    const [userPokemon, setUserPokemon] = useState("") // useState
     const [pokemonType, setPokemonType] = useState("")
     const [pokemonAbility, setPokemonAbility] = useState("")
+     /* The above code is creating state variables that are storing the name, image, type, and ability of
+   the pokemon. */
 
   /**
     using the `fetch` function to make a request to the PokeAPI.
    */
-    const fetchPokemon = async (userPokemon) => {
+    const fetchPokemon = async (userPokemon) => { //parameter userPokemon
     console.log(userPokemon)
-        const pokemon= await fetch(`https://pokeapi.co/api/v2/pokemon/${userPokemon}`)
+    
+    // making a request to the PokeAPI, userPokemon is state that changes depending on with pokemon button the user click, this userPokemon is for specific POKEMON
+        const pokemon= await fetch(`https://pokeapi.co/api/v2/pokemon/${userPokemon}`) //back tic`` is use so the URL can change
         const pokemonDetail = await pokemon.json() //manipular la informacion de la data que esta en fetch = APi
      console.log(pokemonDetail)
   
-         /* The above code is creating variables that are storing the name, type, and ability of the
-    pokemon. */
-        const name = pokemonDetail.forms[0].name
+    // we are taking information FROM the API and storing the DATA in Variable
+        const name = pokemonDetail.forms[0].name //variable name
         const type = pokemonDetail.types[0].type.name
         const ability = pokemonDetail.abilities[0].ability.name
         const image = pokemonDetail.sprites.other.home.front_default
     console.log(image)
         
         
-        /* the state of the app to the variables that are storing the name,
-        type, and ability of the pokemon. */
+    //we are taking this stored DATA and assigning it to our STATE
         setPokemonName(name)
         setPokemonImage(image)
         setPokemonType(type)
@@ -49,8 +50,8 @@ const Card =  () => {
  * then the fetchPokemon function is called with the value of the button as the argument.
  */
    const handleClick = (e) => { 
-    setUserPokemon(e.target.value)
-    fetchPokemon(e.target.value)
+    setUserPokemon(e.target.value) //keyWord target.Value
+    fetchPokemon(e.target.value) // target is all <button> value value= " pikachu "
   } 
 
   return (
@@ -79,7 +80,7 @@ const Card =  () => {
            
         </div>
        
-     
+     {/* we are display thi updated state */}
         <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
         <p>Type: {pokemonType}</p>

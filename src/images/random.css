@@ -1,19 +1,17 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Container for flexboxes */
+ 
+
+
+ 
   .g-4 {
+    
     display: flex;
     flex-wrap: wrap;
     margin: 0%;
+    margin-top: 0%;
   }
   
-  /* Create four equal columns */
-  COL {
-    flex: 25%;
-    padding: 20px;
-  }
+
+ 
   
   /* On screens that are 992px wide or less, go from four columns to two columns */
   @media screen and (max-width: 992px) {
