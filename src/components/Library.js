@@ -10,11 +10,7 @@ import Row from 'react-bootstrap/Row';
 
 
 
-/**
- * The function Library is a React component that renders a div with a button and a paragraph. The
- * button has an onClick event that dispatches an action to the Redux store. The paragraph displays the
- * value of the Redux store.
- */
+
 
 const Library = () => {
     
@@ -23,7 +19,7 @@ const Library = () => {
 
 
    /* This is setting the state of the pokemon. */
-    const [pokemonImage1, setPokemonImage1] = useState("")
+    const [pokemonImage1, setPokemonImage1] = useState("") //store data about pokemon after fetch call
     const [pokemonDefense1, setPokemonDefense1] = useState("")
     const [pokemonAttack1, setPokemonAttack1] = useState("")
     const [pokemonHp1, setPokemonHp1] = useState("")
@@ -57,10 +53,10 @@ const Library = () => {
    */
     const pokemonLibrary = async() => {
         const pokemonFetch= await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
-        const pokemonData = await pokemonFetch.json()  // manipulacion de la informacion de API
+        const pokemonData = await pokemonFetch.json()  // manipulacion de la informacion de API,  // convert data to json format
 
 
-/* This is setting the state of the pokemon. */
+ // we are taking information FROM the API and storing the DATA in Variable
             const image = pokemonData.sprites.other.home.front_default
             const defense = pokemonData.stats[2].base_stat
             const attack = pokemonData.stats[1].base_stat
@@ -72,7 +68,7 @@ const Library = () => {
 
 
 
-/* Setting the state of the pokemon. */
+//we are taking this stored DATA and assigning it to our STATE
         setPokemonImage1(image)
         setPokemonDefense1(defense)
         setPokemonAttack1(attack)
@@ -82,11 +78,12 @@ const Library = () => {
         setPokemonPopularMove1(popularMove)
         setPokemonPopularAbility1(popularAbility)
 
- /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
+ /* data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch2= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+1}`)
-        const pokemonData2 = await pokemonFetch2.json() // manipulacion de la informacion de API
+        const pokemonData2 = await pokemonFetch2.json() // manipulacion de la informacion de API, // convert data to json format
 
-            const image2 = pokemonData2.sprites.other.home.front_default
+         // we are taking information FROM the API and storing the DATA in Variable
+            const image2 = pokemonData2.sprites.other.home.front_default  
             const defense2 = pokemonData2.stats[2].base_stat
             const attack2 = pokemonData2.stats[1].base_stat
             const hp2 = pokemonData2.stats[0].base_stat
@@ -94,7 +91,7 @@ const Library = () => {
             const name2 = pokemonData2.name
             const popularMove2 = pokemonData2.moves[0].move.name
             const popularAbility2 = pokemonData2.abilities[0].ability.name
- /* Setting the state of the pokemon. */
+//we are taking this stored DATA and assigning it to our STATE
         setPokemonImage2(image2)
         setPokemonDefense2(defense2)
         setPokemonAttack2(attack2)
@@ -107,8 +104,9 @@ const Library = () => {
 
  /* This is fetching the data from the PokeAPI and converting it into a JSON object. */
         const pokemonFetch3= await fetch(`https://pokeapi.co/api/v2/pokemon/${value+2}`)
-        const pokemonData3 = await pokemonFetch3.json()  // manipulacion de la informacion de API
+        const pokemonData3 = await pokemonFetch3.json()  // manipulacion de la informacion de API,  // convert data to json format
 
+         // we are taking information FROM the API and storing the DATA in Variable
             const image3 = pokemonData3.sprites.other.home.front_default
             const defense3 = pokemonData3.stats[2].base_stat
             const attack3 = pokemonData3.stats[1].base_stat
@@ -117,7 +115,7 @@ const Library = () => {
             const name3 = pokemonData3.name
             const popularMove3 = pokemonData3.moves[0].move.name
             const popularAbility3 = pokemonData3.abilities[0].ability.name
-/* Setting the state of the pokemon. */
+//we are taking this stored DATA and assigning it to our STATE
         setPokemonImage3(image3)
         setPokemonDefense3(defense3)
         setPokemonAttack3(attack3)

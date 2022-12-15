@@ -9,14 +9,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 /* Importing the Link component from the react-router-dom library. */
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
 
 
+// https://react-bootstrap.github.io/components/dropdowns/
 
-/* The above code is creating a navbar with a container. The container is holding the navbar. The
-navbar is holding the navbar.brand, navbar.toggle, and navbar.collapse. The navbar.brand is holding
-the title of the app. The navbar.toggle is holding the navbar.collapse. The navbar.collapse is
-holding the nav. The nav is holding the links to the different pages. */
 const PokemonNav = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="info" variant="Danger">

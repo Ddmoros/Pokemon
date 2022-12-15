@@ -1,4 +1,5 @@
-/* This is importing all the necessary components for the Random.js file. */
+
+/* the useEffect and useState hooks from the react library. */
 import {useEffect,useState} from 'react'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -18,6 +19,7 @@ const [pokemonPopularAbility, setPokemonPopularAbility] = useState("")
 const [displayDetail, setDisplayDetail] = useState(false)
 
 
+/*  useEffect hook to call the getData function when the component mounts. */
 useEffect(() => {
  getData()
 
@@ -29,12 +31,16 @@ const getData = async() => {
 let results = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}/`) // `` ${} template literals por que temples??
 let data = await results.json() // convert data to json format
 console.log(data)
+
+// we are taking information FROM the API and storing the DATA in Variable
         const name = data.forms[0].name
         const type = data.types[0].type.name
         const image =data.sprites.other.home.front_default
         const popularAbility = data.abilities[0].ability.name
 
 console.log(image)
+
+     //we are taking this stored DATA and assigning it to our STATE
           setPokemon(data) //local state variable
           setPokemonName(name)
           setPokemonImage(image)
@@ -42,6 +48,9 @@ console.log(image)
           setPokemonPopularAbility(popularAbility)
 }
 
+
+
+ //The refreshPage function refreshes the page by reloading the page.
 
 function refreshPage() {
   window.location.reload();

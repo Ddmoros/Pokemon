@@ -45,10 +45,7 @@ const Card =  () => {
     
 
 
-/**
- * When the user clicks on a button, the value of that button is set to the state of userPokemon, and
- * then the fetchPokemon function is called with the value of the button as the argument.
- */
+
    const handleClick = (e) => { 
     setUserPokemon(e.target.value) //keyWord target.Value
     fetchPokemon(e.target.value) // target is all <button> value value= " pikachu "
