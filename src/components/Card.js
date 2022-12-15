@@ -33,7 +33,7 @@ const Card =  () => {
         
         
     //we are taking this stored DATA and assigning it to our STATE
-        setPokemonName(name)
+        setPokemonName(name) // hanging our state to match the information in the api
         setPokemonImage(image)
         setPokemonType(type)
         setPokemonAbility(ability)
