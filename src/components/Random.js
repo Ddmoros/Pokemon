@@ -1,6 +1,5 @@
 /* This is importing all the necessary components for the Random.js file. */
 import {useEffect,useState} from 'react'
-import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -9,9 +8,9 @@ import Container from 'react-bootstrap/Container';
 import Search from './Search';
 
 
-const Random = (props) => {
+const Random = () => {
 const [pokemon, setPokemon] = useState({}) //store data about pokemon after fetch call
-const [pokemonName, setPokemonName] = useState("")
+const [pokemonName, setPokemonName] = useState("") // local state variable 
 const [pokemonImage, setPokemonImage] = useState("")
 const [userPokemon, setUserPokemon] = useState("")
 const [pokemonType, setPokemonType] = useState("")
@@ -28,25 +27,21 @@ useEffect(() => {
 const getData = async() => {
     const number = Math.floor(Math.random() *900) //this function will get us a random number from 0 to 899
 let results = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}/`) // `` ${} template literals por que temples??
-let data = await results.json() // make json for data manipulation
-// newArr.push(data)
-// setRandomPokemonArray(data)
+let data = await results.json() // convert data to json format
+console.log(data)
         const name = data.forms[0].name
         const type = data.types[0].type.name
         const image =data.sprites.other.home.front_default
         const popularAbility = data.abilities[0].ability.name
 
 console.log(image)
-          setPokemon(data)
+          setPokemon(data) //local state variable
           setPokemonName(name)
           setPokemonImage(image)
           setPokemonType(type)
           setPokemonPopularAbility(popularAbility)
 }
-const handleAdd = (pokemon)=>{
-  // console.log(pokemon)
-  props.addToFavorite(pokemon)
-}
+
 
 function refreshPage() {
   window.location.reload();
@@ -72,6 +67,7 @@ function refreshPage() {
         <button onClick={() => setDisplayDetail(!displayDetail)}>Detail</button> 
      
         {displayDetail ? 
+        // ternary operator 
         <>
         <p>Name📛: {pokemonName} </p>
         <p>type🫥: {pokemonType}</p>
@@ -91,11 +87,6 @@ function refreshPage() {
     </div>
   )
 }
-const mapDispatchToProps=(dispatch) => {
-  return{addToFavorite:(pokemon) => dispatch({type:"ADD_TO_FAVORITE", data:pokemon })}
-  }
-  const mapStateToProps=(state) => {
-    return{favorite:state.favorite}
-}
 
-export default connect(mapStateToProps, mapDispatchToProps) (Random)
+
+export default Random
