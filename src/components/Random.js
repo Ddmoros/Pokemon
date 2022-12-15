@@ -10,13 +10,13 @@ import Search from './Search';
 
 
 const Random = () => {
-const [pokemon, setPokemon] = useState({}) //store data about pokemon after fetch call
-const [pokemonName, setPokemonName] = useState("") // local state variable 
-const [pokemonImage, setPokemonImage] = useState("")
-const [userPokemon, setUserPokemon] = useState("")
-const [pokemonType, setPokemonType] = useState("")
-const [pokemonPopularAbility, setPokemonPopularAbility] = useState("")
-const [displayDetail, setDisplayDetail] = useState(false)
+    const [pokemon, setPokemon] = useState({}) //store data about pokemon after fetch call
+    const [pokemonName, setPokemonName] = useState("") // local state variable 
+    const [pokemonImage, setPokemonImage] = useState("")
+    const [userPokemon, setUserPokemon] = useState("")
+    const [pokemonType, setPokemonType] = useState("")
+    const [pokemonPopularAbility, setPokemonPopularAbility] = useState("")
+    const [displayDetail, setDisplayDetail] = useState(false)
 
 
 /*  useEffect hook to call the getData function when the component mounts. */

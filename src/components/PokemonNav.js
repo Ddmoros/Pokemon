@@ -1,4 +1,4 @@
-/* The above code is importing the react-bootstrap components that  will be using in our NavBar. */
+/*  react-bootstrap components that  will be using in our NavBar. */
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';

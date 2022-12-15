@@ -19,8 +19,8 @@ const Footer = () => {
     </div>
   )
 }
-/* Importe npm install react-icons para tener los simbolos abajo de mi apliacion AiFillGithub,
-/* Target="_blank" esta funcion es para saltar a otra pag.web
-/* Exporting the Footer component to be used in other files. */
+//Importe npm install react-icons para tener los simbolos abajo de mi apliacion AiFillGithub,
+// Target="_blank" esta funcion es para saltar a otra pag.web
+
 
 export default Footer

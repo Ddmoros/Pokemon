@@ -3,6 +3,8 @@ import React,{useState} from 'react'
 import decrementCount from '../actions/decrementCount.js'
 import incrementCount from '../actions/incrementCount.js'
 import {useDispatch, useSelector} from 'react-redux'
+
+
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -52,6 +54,7 @@ const Library = () => {
    * para poder manipular la imformacion"data"
    */
     const pokemonLibrary = async() => {
+    
         const pokemonFetch= await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
         const pokemonData = await pokemonFetch.json()  // manipulacion de la informacion de API,  // convert data to json format
 

@@ -1,4 +1,4 @@
-/* The above code is importing the React library and the useState hook from the React library. */
+/*  React library and the useState hook from the React library. */
 import React,{useState} from 'react'
 import "../images/styles.css" //the code is importing styles Css
 
@@ -9,15 +9,13 @@ const Card =  () => {
   /* The above code is creating a function called Card. */
     const [pokemonName, setPokemonName] = useState("")  //values1, values2: thi only way to change value1 is by using Values2
     const [pokemonImage, setPokemonImage] = useState("") // value1 = state, value2 = How we update or change STATE
-    const [userPokemon, setUserPokemon] = useState("") // useState
+    const [userPokemon, setUserPokemon] = useState("") 
     const [pokemonType, setPokemonType] = useState("")
     const [pokemonAbility, setPokemonAbility] = useState("")
      /* The above code is creating state variables that are storing the name, image, type, and ability of
    the pokemon. */
 
-  /**
-    using the `fetch` function to make a request to the PokeAPI.
-   */
+   //using the `fetch` function to make a request to the PokeAPI.
     const fetchPokemon = async (userPokemon) => { //parameter userPokemon
     console.log(userPokemon)
     
