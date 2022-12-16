@@ -10,8 +10,8 @@ import Row from 'react-bootstrap/Row';
 
 /* the code that is used to search for the pokemon. */
 const Search = () => {
-const [pokemonSearch, setPokemonSearch] = useState("")  //values1, values2: thi only way to change value1 is by using Values2
-const [pokemonName, setPokemonName] = useState("")
+    const [pokemonSearch, setPokemonSearch] = useState("")  //values1, values2: thi only way to change value1 is by using Values2
+    const [pokemonName, setPokemonName] = useState("")
     const [pokemonImage, setPokemonImage] = useState("")
     const [pokemonType, setPokemonType] = useState("")
     const [pokemonAbility, setPokemonAbility] = useState("")

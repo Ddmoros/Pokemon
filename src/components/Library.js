@@ -53,6 +53,7 @@ const Library = () => {
    * method to convert the data into a JSON object.
    * para poder manipular la imformacion"data"
    */
+   
     const pokemonLibrary = async() => {
     
         const pokemonFetch= await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
