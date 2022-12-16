@@ -6,7 +6,7 @@
 ![PokemonApp](./src/images/mobile.png) 
 
 # LIVE URL. 👇
- [Live site = WWWW](https://main.d2066zgqqlyzwb.amplifyapp.com "Live site = WWWW") 
+ [Live site](https://main.d2066zgqqlyzwb.amplifyapp.com "Live site") 
 
 ## Documentation PokeApi
 [Pokemon API information](https://pokeapi.co/docs/v2/ "Pokemon API information") 
