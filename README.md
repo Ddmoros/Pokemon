@@ -2,11 +2,11 @@
 # Pokemon App⚡️
 ![PokemonApp](./src/images/evolucion.png) 
 
-# Pokemon App⚡️ Mobile responsive
+# Pokemon App⚡️ Mobile responsive📲
 ![PokemonApp](./src/images/mobile.png) 
 
 # LIVE URL. 👇
- [Live site](https://main.d2066zgqqlyzwb.amplifyapp.com "Live site") 
+ [Live site = WWWW](https://main.d2066zgqqlyzwb.amplifyapp.com "Live site = WWWW") 
 
 ## Documentation PokeApi
 [Pokemon API information](https://pokeapi.co/docs/v2/ "Pokemon API information") 
