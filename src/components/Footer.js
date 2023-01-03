@@ -9,8 +9,8 @@ import {FaGithub, FaLinkedin, FaFingerprint} from 'react-icons/fa'
 const Footer = () => {
   return (
     <div className='footerMain'>
+        <p>owner: Daniel Moros</p>
 
-  
         <a href="https://github.com/Ddmoros/Pokemon"><FaGithub className='icons' size={30} /></a>
 											
 		    <a href="https://www.linkedin.com/in/daniel-moros-059711210/" target="_blank" ><FaLinkedin className='icons' size={30} /></a>

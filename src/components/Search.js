@@ -56,11 +56,12 @@ const fetchPokemon = async() => {
               <Card.Title>Name: {pokemonName}</Card.Title><hr></hr>
               <Card.Text>
               
-            
+              // ternary operator or ternary conditional operator
            
                 Type: {pokemonType}, <br></br>
-             
                 Popular Ability: {pokemonAbility}<br></br>
+
+
               </Card.Text>
             </Card.Body>
           </Card>

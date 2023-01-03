@@ -4,7 +4,6 @@ import "../images/styles.css" //the code is importing styles Css
 
 
 
-
 const Card =  () => {
   /* The above code is creating a function called Card. */
     const [pokemonName, setPokemonName] = useState("")  //values1, values2: thi only way to change value1 is by using Values2
@@ -74,7 +73,7 @@ const Card =  () => {
          
            
         </div>
-       
+        {/* // ternary operator or ternary conditional operator */}
      {/* we are display thi updated state */}
         <h1>{pokemonName}</h1>
         <img alt={pokemonName} src={pokemonImage}/>
