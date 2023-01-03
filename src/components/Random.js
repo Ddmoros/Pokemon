@@ -76,7 +76,7 @@ function refreshPage() {
         <button onClick={() => setDisplayDetail(!displayDetail)}>Detail</button> 
      
         {displayDetail ? 
-      // ternary operator or ternary conditional operator  
+     
         <>
         <p>Name📛: {pokemonName} </p>
         <p>type🫥: {pokemonType}</p>

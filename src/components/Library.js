@@ -153,7 +153,7 @@ pokemonLibrary()
               <Card.Title>Name: {pokemonName1}</Card.Title><hr></hr>
               <Card.Text>
 
-              // ternary operator or ternary conditional operator
+              
 
                 HP: {pokemonHp1}, <br></br>
                 Attack: {pokemonAttack1}, <br></br>
@@ -175,7 +175,7 @@ pokemonLibrary()
               <Card.Title>Name: {pokemonName2}</Card.Title><hr></hr>
               <Card.Text>
 
-              // ternary operator or ternary conditional operator
+              
 
                 HP: {pokemonHp2}, <br></br>
                 Attack: {pokemonAttack2}, <br></br>
@@ -196,7 +196,7 @@ pokemonLibrary()
               <Card.Title>Name: {pokemonName3}</Card.Title><hr></hr>
               <Card.Text>
 
-              // ternary operator or ternary conditional operator
+             
 
                 HP: {pokemonHp3}, <br></br>
                 Attack: {pokemonAttack3}, <br></br>
