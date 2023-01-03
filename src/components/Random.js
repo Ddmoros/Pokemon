@@ -64,6 +64,7 @@ function refreshPage() {
           <Container>
              <Row xs={1} md={3} className="g-4">
  <Col>
+ <button onClick={refreshPage}>Click to new pokemon!</button>
    <Card className='card-container'>
      <Card.Img className='card-image' variant="top" src={pokemonImage} />
      <Card.Body>
@@ -83,7 +84,7 @@ function refreshPage() {
         <p>popular Ability🎯: {pokemonPopularAbility}</p>
         </>
         : ""}
-    <button onClick={refreshPage}>Click to new pokemon!</button>
+   
    </Card>
  </Col>
  
